@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa81d914_e920959d",
+        "filename": "python-zaqar-tests-tempest.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2017-11-02T16:45:12Z",
+      "side": 1,
+      "message": "watcher? Bad copy/paste :)",
+      "range": {
+        "startLine": 1,
+        "startChar": 16,
+        "endLine": 1,
+        "endChar": 23
+      },
+      "revId": "ad153505c776f2ef336e14bfc171db1c6f0e27a5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
