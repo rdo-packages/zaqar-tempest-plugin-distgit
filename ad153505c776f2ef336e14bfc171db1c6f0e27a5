@@ -22,6 +22,23 @@
       "revId": "ad153505c776f2ef336e14bfc171db1c6f0e27a5",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa81d914_493e01ba",
+        "filename": "python-zaqar-tests-tempest.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 87
+      },
+      "writtenOn": "2017-11-02T16:56:49Z",
+      "side": 1,
+      "message": "Why epoch in a new package?",
+      "revId": "ad153505c776f2ef336e14bfc171db1c6f0e27a5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
