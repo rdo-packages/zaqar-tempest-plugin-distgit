@@ -126,3 +126,4 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/zaqar-tempest-plugin/commit/?id=9051907cf70527b70763ae39b096b6ba477c3096
