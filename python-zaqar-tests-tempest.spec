@@ -1,7 +1,7 @@
 %global service zaqar
 %global plugin zaqar-tempest-plugin
 %global module zaqar_tempest_plugin
-%global with_doc 1
+%global with_doc 0
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
