@@ -1,8 +1,4 @@
-%{!?upstream_version: %global upstream_version %{commit}}
-%global commit f6c761d2138824849ca3036e49210e7649978ebb
-%global shortcommit %(c=%{commit}; echo ${c:0:7})
-# DO NOT REMOVE ALPHATAG
-%global alphatag .%{shortcommit}git
+%{!?upstream_version: %global upstream_version %{version}}
 
 %global service zaqar
 %global plugin zaqar-tempest-plugin
@@ -24,13 +20,13 @@ This package contains Tempest tests to cover the Zaqar project. \
 Additionally it provides a plugin to automatically load these tests into Tempest.
 
 Name:       python-%{service}-tests-tempest
-Version:    0.0.1
-Release:    0.2%{?alphatag}%{?dist}
+Version:    0.1.0
+Release:    1%{?dist}
 Summary:    Tempest Integration of Zaqar Project
 License:    ASL 2.0
 URL:        https://git.openstack.org/cgit/openstack/%{plugin}/
 
-Source0:    http://github.com/openstack/%{plugin}/archive/%{commit}.tar.gz#/%{plugin}-%{shortcommit}.tar.gz
+Source0:    http://tarballs.openstack.org/%{plugin}/%{module}-%{upstream_version}.tar.gz#/%{plugin}-%{upstream_version}.tar.gz
 
 BuildArch:  noarch
 BuildRequires:  git
@@ -138,5 +134,8 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Mon Aug 27 2018 RDO <dev@lists.rdoproject.org> 0.1.0-1
+- Update to 0.1.0
+
 * Thu Aug 23 2018 Chandan Kumar <chkumar@redhat.com> 0.0.1-0.2.f6c761d2git
 - Update to pre-release 0.0.1 (f6c761d2138824849ca3036e49210e7649978ebb)
