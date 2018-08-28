@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9abe1de1_1f1442f3",
+        "filename": "python-zaqar-tests-tempest.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2018-08-28T10:07:27Z",
+      "side": 1,
+      "message": "tarsources",
+      "range": {
+        "startLine": 29,
+        "startChar": 92,
+        "endLine": 29,
+        "endChar": 98
+      },
+      "revId": "acd138cc61bc9956d21c43e0217bb0325531c8b1",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
