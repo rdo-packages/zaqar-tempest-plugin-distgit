@@ -10,8 +10,8 @@ This package contains Tempest tests to cover the Zaqar project. \
 Additionally it provides a plugin to automatically load these tests into Tempest.
 
 Name:       python-%{service}-tests-tempest
-Version:    XXX
-Release:    XXX
+Version:    1.0.0
+Release:    1%{?dist}
 Summary:    Tempest Integration of Zaqar Project
 License:    ASL 2.0
 URL:        https://git.openstack.org/cgit/openstack/%{plugin}/
@@ -90,3 +90,6 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Wed May 06 2020 RDO <dev@lists.rdoproject.org> 1.0.0-1
+- Update to 1.0.0
+
