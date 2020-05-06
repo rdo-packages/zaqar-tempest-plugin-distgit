@@ -16,7 +16,7 @@ Summary:    Tempest Integration of Zaqar Project
 License:    ASL 2.0
 URL:        https://git.openstack.org/cgit/openstack/%{plugin}/
 
-Source0:    http://tarballs.openstack.org/%{plugin}/%{plugin}-%{upstream_version}.tar.gz
+Source0:    http://tarballs.openstack.org/%{plugin}/%{module}-%{upstream_version}.tar.gz
 
 BuildArch:  noarch
 BuildRequires:  git
