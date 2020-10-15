@@ -1,3 +1,5 @@
+%{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
+%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
 %global service zaqar
 %global plugin zaqar-tempest-plugin
 %global module zaqar_tempest_plugin
@@ -11,14 +13,24 @@ Additionally it provides a plugin to automatically load these tests into Tempest
 
 Name:       python-%{service}-tests-tempest
 Version:    1.1.0
-Release:    1%{?dist}
+Release:    2%{?dist}
 Summary:    Tempest Integration of Zaqar Project
 License:    ASL 2.0
 URL:        https://git.openstack.org/cgit/openstack/%{plugin}/
 
 Source0:    http://tarballs.openstack.org/%{plugin}/%{module}-%{upstream_version}.tar.gz
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+Source101:        http://tarballs.openstack.org/%{plugin}/%{module}-%{upstream_version}.tar.gz.asc
+Source102:        https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
+%endif
 
 BuildArch:  noarch
+
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+BuildRequires:  /usr/bin/gpgv2
+%endif
 BuildRequires:  git
 BuildRequires:  openstack-macros
 
@@ -57,6 +69,10 @@ It contains the documentation for the zaqar tempest plugin.
 %endif
 
 %prep
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+%{gpgverify}  --keyring=%{SOURCE102} --signature=%{SOURCE101} --data=%{SOURCE0}
+%endif
 %autosetup -n %{module}-%{upstream_version} -S git
 
 # Let's handle dependencies ourseleves
@@ -90,6 +106,9 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Wed Oct 21 2020 Joel Capitao <jcapitao@redhat.com> 1.1.0-2
+- Enable sources tarball validation using GPG signature.
+
 * Thu Oct 01 2020 RDO <dev@lists.rdoproject.org> 1.1.0-1
 - Update to 1.1.0
 
