@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
+%global sources_gpg_sign 0xf8675126e2411e7748dd46662fc2093e4682645f
 %global service zaqar
 %global plugin zaqar-tempest-plugin
 %global module zaqar_tempest_plugin
@@ -18,8 +18,8 @@ This package contains Tempest tests to cover the Zaqar project. \
 Additionally it provides a plugin to automatically load these tests into Tempest.
 
 Name:       python-%{service}-tests-tempest
-Version:    XXX
-Release:    XXX
+Version:    2.0.0
+Release:    1%{?dist}
 Summary:    Tempest Integration of Zaqar Project
 License:    Apache-2.0
 URL:        https://git.openstack.org/cgit/openstack/%{plugin}/
@@ -115,3 +115,6 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Wed Sep 25 2024 RDO <dev@lists.rdoproject.org> 2.0.0-1
+- Update to 2.0.0
+
